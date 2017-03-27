@@ -1,3 +1,8 @@
+bin
+obj
+.gitignore
+.cpp-failed
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
