@@ -81,7 +81,7 @@ namespace Calculator{
     void PrintHelp();
     void Init();
     void InitString();
-    void GetInput();
+    bool GetInput();
     void Run(int stringBufferSize = 256);
 
 
@@ -140,6 +140,7 @@ namespace Calculator{
         virtual Type GetValueType();
         bool SetValue(Value& val);
         virtual bool SetValue(Value* val);
+        virtual bool HasNan();
         virtual Value& Add(Value& rhs);
         virtual Value& Subtract(Value& rhs);
         virtual Value& Multiply(Value& rhs);
@@ -195,6 +196,7 @@ namespace Calculator{
         Number(int val, bool allocatedWithNew = true, bool createdByOperator = false);
         Number(float val, bool allocatedWithNew = true, bool createdByOperator = false);
         Number(double val, bool allocatedWithNew = true, bool createdByOperator = false);
+        bool HasNan();
         bool IsNumber();
         double GetDouble();
         bool SetValue(Value* rhs);
@@ -237,7 +239,6 @@ namespace Calculator{
         bool Normalize(bool force = false);
         Vector2 Normalized();
         bool IsVector();
-        static int TryRead(char* s, Vector2** out, Vars* vars = null);
         ostream& Print(ostream& o);
         Number* GetX(){return (Number*)(x->GetValuePtr());}
         Number* GetY(){return (Number*)(y->GetValuePtr());}
@@ -313,6 +314,9 @@ namespace Calculator{
 
     class Operator : public MathT{
     public:
+        static vector<Operator*> operators;
+        static int opCount;
+        static void Init();
         Operator(bool allocatedWithNew = true) : MathT(allocatedWithNew){}
         ~Operator(){cout << "op dlet" << endl;}
         Type GetType();
@@ -395,9 +399,8 @@ namespace Calculator{
     ostream& operator<<(Expression& x, ostream& o);
 
     class Bracket : public Expression{
-    protected:
-        Bracket(bool allocatedWithNew = true, bool createdByOperator = false) : Expression(allocatedWithNew, createdByOperator){}
     public:
+        Bracket(bool allocatedWithNew = true, bool createdByOperator = false) : Expression(allocatedWithNew, createdByOperator){}
         Type GetType();
         bool IsBracket();
         static int TryRead(char* s, Bracket** out, Vars* vars = null);
@@ -440,6 +443,15 @@ namespace Calculator{
         Type GetType();
         class Sqrt;
         class Log;
+        class ConsV2;
+    };
+    class InternalFunction::ConsV2 : public InternalFunction{
+    public :
+        static char* funcName;
+        ConsV2(bool allocatedWithNew = true, bool createdByOperator = false);
+        Value* GetValuePtr();
+        Function* CopyF();
+        Type GetValueType();
     };
     class InternalFunction::Sqrt : public InternalFunction{
     public :
@@ -482,6 +494,17 @@ namespace Calculator{
     bool ContainsAtFront(char* s, const char* ss);
     int ArgumentLength(char* s, bool total = false);
     bool IsUnusable(string s);
+
+    namespace TwentyFour{
+        extern Number twentyFour;
+        bool TryBrackets(Expression* ex);
+        bool TryOperator(Expression* ex, Number** nums, int i);
+        bool TryOperators(Number** nums);
+        void Solve(int* nums0);
+        void Solve(Number** nums);
+        void Read(char* s);
+        void Run();
+    }
 }
 
 #define CALC2_HPP

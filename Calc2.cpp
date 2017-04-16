@@ -36,57 +36,65 @@ namespace Calculator{
             "SemiDirectValue"};
 
     void PrintHelp(){
-        cout << " >>> " << endl;
-        cout << " >>> ( ) Evaluating" << endl;
-        cout << " >>> Input an expression to evaluate. For example, '2+2'" << endl;
-        cout << " >>> Order of operation goes as follows (first to last) : brackets, multiplications and divisions, addition and subtraction" << endl;
-        cout << " >>> Operations in the same level will be evaluated from left to right." << endl;
-        cout << " >>> " << endl;
-        cout << " >>> ( ) Variables" << endl;
-        cout << " >>> You may define a global variable with '(variable name) = (variable value)'" << endl;
-        cout << " >>> The variable name must begin with a letter." << endl;
-        cout << " >>> The variable name may only contain letters, numbers and underscores." << endl;
-        cout << " >>> If you wish to multiply a variable with a number, make sure to put '*' operator or at least a space." << endl;
-        cout << " >>> You may define a variable with an expression, though only the result will be saved." << endl;
-        cout << " >>> If you wish to save the whole expression, use function without parameter. You'd still need to type the '()'" << endl;
-        cout << " >>> Type 'variables' to see the global variables defined." << endl;
-        cout << " >>> If you wish to multiply a variable with a bracket, make sure you type the '*' operator. Otherwise it will be parsed as a function, and it may fail." << endl;
-        cout << " >>> Expressions may contain global variables" << endl;
-        cout << " >>> " << endl;
-        cout << " >>> ( ) Functions" << endl;
-        cout << " >>> Type 'functions' to see the defined functions" << endl;
-        cout << " >>> You may define a function with '(function name)(var1, var2, ...) = (function expression)'" << endl;
-        cout << " >>> Your expression may contain functions. Just type '(function name)(input_var1, input_var2, ...)'. This also applies to functions' expressions" << endl;
-        cout << " >>> Of course, this may break your function if you redefine the functions it uses and that causes their return types to change." << endl;
-        cout << " >>> If you wish to just copy the function into yours so that it won't be updated (affected), put '$' before the function you want to use in the expression" << endl;
-        cout << " >>> If you wish to use the value of a function, you may store it into a variable first, then put it into your function." << endl;
-        cout << " >>> Functions will try to use its local variables first, then global variables if it failed." << endl;
-        cout << " >>> I discourage the use of local and global variables with the same name, though." << endl;
-        cout << " >>> The value of a global variable in functions follows the actual current value of the global variable." << endl;
-        cout << " >>> Again, this may break your function if you redefine the variable with different type." << endl;
-        cout << " >>> If you wish to use a variable's current value when the function was defined, put '$' before the variable name." << endl;
-        cout << " >>> " << endl;
-        cout << " >>> ( ) Misc" << endl;
-        cout << " >>> This program only accept * as multiplication operator, and / as division operator" << endl;
-        cout << " >>> Numbers may be rounded when printed, but this doesn't affect the actual calculation." << endl;
-        cout << " >>> The 'e+n' in numbers means '*10^n'. That's just how very big or very small numbers are printed." << endl;
-        cout << " >>> Type 'clear' to clear." << endl;
-        cout << " >>> " << endl;
+        cout << "[C]  >>> " << endl;
+        cout << "[C]  >>> ( ) Evaluating" << endl;
+        cout << "[C]  >>> Input an expression to evaluate. For example, '2+2'" << endl;
+        cout << "[C]  >>> Order of operation goes as follows (first to last) : brackets, multiplications and divisions, addition and subtraction" << endl;
+        cout << "[C]  >>> Operations in the same level will be evaluated from left to right." << endl;
+        cout << "[C]  >>> " << endl;
+        cout << "[C]  >>> ( ) Variables" << endl;
+        cout << "[C]  >>> You may define a global variable with '(variable name) = (variable value)'" << endl;
+        cout << "[C]  >>> The variable name must begin with a letter." << endl;
+        cout << "[C]  >>> The variable name may only contain letters, numbers and underscores." << endl;
+        cout << "[C]  >>> If you wish to multiply a variable with a number, make sure to put '*' operator or at least a space." << endl;
+        cout << "[C]  >>> You may define a variable with an expression, though only the result will be saved." << endl;
+        cout << "[C]  >>> If you wish to save the whole expression, use function without parameter. You'd still need to type the '()'" << endl;
+        cout << "[C]  >>> Type 'variables' to see the global variables defined." << endl;
+        cout << "[C]  >>> If you wish to multiply a variable with a bracket, make sure you type the '*' operator. Otherwise it will be parsed as a function, and it may fail." << endl;
+        cout << "[C]  >>> Expressions may contain global variables" << endl;
+        cout << "[C]  >>> " << endl;
+        cout << "[C]  >>> ( ) Functions" << endl;
+        cout << "[C]  >>> Type 'functions' to see the defined functions" << endl;
+        cout << "[C]  >>> You may define a function with '(function name)(var1, var2, ...) = (function expression)'" << endl;
+        cout << "[C]  >>> Your expression may contain functions. Just type '(function name)(input_var1, input_var2, ...)'. This also applies to functions' expressions" << endl;
+        cout << "[C]  >>> Of course, this may break your function if you redefine the functions it uses and that causes their return types to change." << endl;
+        cout << "[C]  >>> If you wish to just copy the function into yours so that it won't be updated (affected), put '$' before the function you want to use in the expression" << endl;
+        cout << "[C]  >>> If you wish to use the value of a function, you may store it into a variable first, then put it into your function." << endl;
+        cout << "[C]  >>> Functions will try to use its local variables first, then global variables if it failed." << endl;
+        cout << "[C]  >>> I discourage the use of local and global variables with the same name, though." << endl;
+        cout << "[C]  >>> The value of a global variable in functions follows the actual current value of the global variable." << endl;
+        cout << "[C]  >>> Again, this may break your function if you redefine the variable with different type." << endl;
+        cout << "[C]  >>> If you wish to use a variable's current value when the function was defined, put '$' before the variable name." << endl;
+        cout << "[C]  >>> " << endl;
+        cout << "[C]  >>> ( ) Misc" << endl;
+        cout << "[C]  >>> This program only accept * as multiplication operator, and / as division operator" << endl;
+        cout << "[C]  >>> Numbers may be rounded when printed, but this doesn't affect the actual calculation." << endl;
+        cout << "[C]  >>> The 'e+n' in numbers means '*10^n'. That's just how very big or very small numbers are printed." << endl;
+        cout << "[C]  >>> Type 'clear' to clear." << endl;
+        cout << "[C]  >>> " << endl;
+        cout << "[C]  >>> ( ) Twenty Four (24)" << endl;
+        cout << "[C]  >>> Type 'twentyfour' for 24 card game brute force solver." << endl;
+        cout << "[C]  >>> " << endl;
     }
     char* helpStr = "help";
     char* varsStr = "variables";
     char* clsStr = "clear";
     char* funcStr = "functions";
+    char* twentyFourStr = "twentyfour";
+    char* exitStr = "exit";
     void InitString(){
-        cout << " >>> Calculator" << endl;
-        cout << " >>> Input 'help' for help" << endl;
+        cout << "[C]  >>> Calculator" << endl;
+        cout << "[C]  >>> Input 'help' for help" << endl;
     }
 
-    void GetInput(){
+    bool GetInput(){
         char inputBuffer[stringBufferSize];
-        printf("<<<  ");
+        printf("[C] <<<  ");
         char* input = gets(inputBuffer);
+        if (!strcmp(input, exitStr))
+            return false;
         TryInput(input);
+        return true;
     }
 
     void Run(int bufferSize){
@@ -94,7 +102,9 @@ namespace Calculator{
         stringBufferSizeStr = SSTR(stringBufferSize);
         Init();
         while(true){
-            GetInput();
+            if(!GetInput()){
+                return;
+            }
         }
     }
 
@@ -116,13 +126,17 @@ namespace Calculator{
             Function::PrintFunctions();
             return true;
         }
+        if (!strcmp(s, twentyFourStr)){
+            TwentyFour::Run();
+            return true;
+        }
         if (TryDefine(s)){
             return true;
         }
         if (TryEvaluate(s)){
             return true;
         }
-        cout << " >>> Bad Input" << endl;
+        cout << "[C]  >>> Bad Input" << endl;
         return false;
     }
     bool TryEvaluate(char* s){
@@ -139,9 +153,9 @@ namespace Calculator{
         string s1 = ss1.str();
         string s2 = ss2.str();
         if (s1 == s2){
-            cout << " >>> " << s1 << endl;
+            cout << "[C]  >>> " << s1 << endl;
         }else{
-            cout << " >>> " << s1 << " == " << s2 << endl;
+            cout << "[C]  >>> " << s1 << " == " << s2 << endl;
         }
         delete x;
         delete &v;
@@ -174,6 +188,7 @@ namespace Calculator{
     void Init(){
         if(inited)
             return;
+        Operator::Init();
         Variable::Init();
         Function::Init();
         unusableNames.push_back("V2");
@@ -318,9 +333,6 @@ namespace Calculator{
         if (ret = TryReadLiteral(s, out, vars)){
             return ret;
         }
-        if (ret = Vector2::TryRead(s, (Vector2**) out, vars)){
-            return ret;
-        }
         if (ret = Number::TryRead(s, (Number**)out)){
             return ret;
         }
@@ -371,6 +383,9 @@ namespace Calculator{
     bool Value::SetValue(Value* v){
         cout << Types::Names[GetType()] << " SetValue" << endl;
         throw(runtime_error("Function not implemented."));
+    }
+    bool Value::HasNan(){
+        return false;
     }
     Value& Value::Add(Value& rhs){
         cout << Types::Names[GetType()] << " Add" << endl;
@@ -459,7 +474,7 @@ namespace Calculator{
         throw(runtime_error("Function not implemented"));
     }
     bool Value::IsEqualTo(Value& rhs){
-        return (!IsLesserThan(rhs) && !IsGreaterThan(rhs));
+        return (!IsLesserThan(rhs) && !IsGreaterThan(rhs) && !rhs.HasNan() && !HasNan());
     }
     bool Value::IsInequalTo(Value& rhs){
         return !IsEqualTo(rhs);
@@ -556,6 +571,9 @@ namespace Calculator{
     Number::Number(double val, bool allocatedWithNew, bool createdByOperator) : Number(allocatedWithNew, createdByOperator){
         value = val;
     }
+    bool Number::HasNan(){
+        return value != value;
+    }
     bool Number::IsNegative(){
         return (value < 0);
     }
@@ -624,7 +642,7 @@ namespace Calculator{
                 return *num;
             }
         }
-        cout << Types::Names[GetValueType()] << " Modulus" << endl;
+        cout << Types::Names[GetValueType()] << " Modulus " << Types::Names[rhs.GetValueType()]<< endl;
         throw(runtime_error("Function not defined"));
     }
     Value& Number::Pow(Value& rhs){
@@ -811,7 +829,7 @@ namespace Calculator{
         return true;
     }
 
-    int Vector2::TryRead(char* s, Vector2** out, Vars* vars){//TODO
+    /*int Vector2::TryRead(char* s, Vector2** out, Vars* vars){//TODO
         int ps = PreceedingSpaces(s);
         s = &(s[ps]);
         char temp[stringBufferSize];
@@ -862,7 +880,7 @@ namespace Calculator{
         delete x2;
 
         return (ps + n + n2 + n3 +2);
-    }
+    }*/
     ostream& Vector2::Print(ostream& o){
         o << '(' << GetXDouble() << ", " << GetYDouble() << ')';
     }
@@ -1038,7 +1056,7 @@ namespace Calculator{
         char temp[stringBufferSize];
         int n;
         if (!(n = Variable::MayHaveVariableAtFront(s, (char**)&temp))){
-            cout << "VTR 1" << endl;
+            //cout << "VTR 1" << endl;
             return false;
         }
         string name = string(temp);
@@ -1138,11 +1156,11 @@ namespace Calculator{
         GlobalVariable::globalVars["e"] = new Variable("e", new Number(MathT::e, true), true);
     }
     void GlobalVariable::PrintGlobalVars(){
-        cout << " >>> Global Variables" << endl;
+        cout << "[C]  >>> Global Variables" << endl;
         Vars::iterator it, end;
         for (it = globalVars.begin(), end = globalVars.end(); it != end; ++it){
             Variable* v = it->second;
-            cout << " >>> " << v->name << " = " << v->GetValue() << endl;
+            cout << "[C]  >>> " << v->name << " = " << v->GetValue() << endl;
         }
     }
     bool GlobalVariable::TryDefine(char* lhs, char* rhs){
@@ -1168,26 +1186,26 @@ namespace Calculator{
         }
         string vname = string(name1);
         if (IsUnusable(vname)){
-            cout << " >>> The name '" << vname << "' is unusable." << endl;
+            cout << "[C]  >>> The name '" << vname << "' is unusable." << endl;
             return true;
         }
         if (Function::templates.count(vname)){
             if (Function::templates[vname]->IsInternalFunction()){
-                cout << " >>> The name '" << vname << "' is already used as an Internal Function name." << endl;
+                cout << "[C]  >>> The name '" << vname << "' is already used as an Internal Function name." << endl;
                 delete val;
                 return true;
             }else{
-                cout << " >>> The name '" << vname << "' is already used as a User-defined Function name." << endl;
-                if (!Ask(" >>> Continue anyway? This may break things. (y/n) : ")){
+                cout << "[C]  >>> The name '" << vname << "' is already used as a User-defined Function name." << endl;
+                if (!Ask("[C]  >>> Continue anyway? This may break things. (y/n) : ")){
                     delete val;
                     return true;
                 }
             }
         }
         if (globalVars.count(vname)){
-            cout << " >>> Variable named '" << vname << "' already exists." << endl;
-            cout << " >>> Its value is " << globalVars[vname]->GetValue() << endl;
-            if (!Ask(" >>> Replace? (y/n) : ")){
+            cout << "[C]  >>> Variable named '" << vname << "' already exists." << endl;
+            cout << "[C]  >>> Its value is " << globalVars[vname]->GetValue() << endl;
+            if (!Ask("[C]  >>> Replace? (y/n) : ")){
                 delete val;
                 return true;
             }
@@ -1196,13 +1214,13 @@ namespace Calculator{
         if (val->IsDirectValue()){
             Variable* var = new Variable(vname, val, true);
             GlobalVariable::globalVars[vname] = var;
-            cout << " >>> " << vname << " = " << var->GetValue() << endl;
+            cout << "[C]  >>> " << vname << " = " << var->GetValue() << endl;
             return true;
         }else if(val->IsExpression()){
             Variable* var = new Variable(vname, val->GetValuePtr(), true);
             val->TryDeleteAllocatedWithNew(true);
             GlobalVariable::globalVars[vname] = var;
-            cout << " >>> " << vname << " = " << var->GetValue() << endl;
+            cout << "[C]  >>> " << vname << " = " << var->GetValue() << endl;
             return true;
         }
         delete val;
@@ -1220,10 +1238,21 @@ namespace Calculator{
         if (s == "y" || s == "Y"){
             return true;
         }
-        cout << " >>> Invalid input." << endl;
+        cout << "[C]  >>> Invalid input." << endl;
     }
 
     //Operator
+    vector<Operator*> Operator::operators;
+    int Operator::opCount;
+    void Operator::Init(){
+        operators.push_back(new Add());
+        operators.push_back(new Subtract());
+        operators.push_back(new Multiply());
+        operators.push_back(new Divide());
+        operators.push_back(new Modulus());
+        //operators.push_back(new Pow());
+        opCount = operators.size();
+    }
     Type Operator::GetType(){
         return Types::Operator;
     }
@@ -1317,7 +1346,12 @@ namespace Calculator{
     }
     //Modulus
     Value& Operator::Modulus::Operate(Value& lhs, Value& rhs){
-        return lhs.Modulus(rhs);
+        Value* vptr = lhs.GetValuePtr();
+        Value& ret = vptr->Modulus(rhs);
+        vptr->TryDeleteCreatedByOp();
+       // lhs.TryDeleteCreatedByOp(); MEMLLEAK MEMORY LEAK
+        //rhs.TryDeleteCreatedByOp();
+        return ret;
     }
     ostream& Operator::Modulus::Print(ostream& o){
         return o << " % ";
@@ -1664,6 +1698,9 @@ namespace Calculator{
     }
     void Function::Init(){
         BuildFuncNameCon();
+        BuildFTRStr();
+        BuildSFTDStr();
+        templates[InternalFunction::ConsV2::funcName] = new InternalFunction::ConsV2(true);
         templates[InternalFunction::Sqrt::funcName] = new InternalFunction::Sqrt(true);
         templates[InternalFunction::Log::funcName] = new InternalFunction::Log(true);
     }
@@ -1742,6 +1779,7 @@ namespace Calculator{
         char vars[stringBufferSize];
         int n;
         if (sscanf(s, ftr1, &temp, &n) != 1 || !n || n>stringBufferSize){
+            //cout << "FTR 1 " << n << " " << s << "." << endl;
             return 0;
         }
 
@@ -1793,11 +1831,11 @@ namespace Calculator{
         return CopyF();
     }
     void Function::PrintFunctions(){
-        cout << " <<< Defined functions " << endl;
+        cout << "  <<< Defined functions " << endl;
         FunctionTemplates::iterator it = templates.begin(), end = templates.end();
         for(;it != end; ++it){
             Function* f = it->second;
-            cout << " <<< " << Types::Names[f->GetValueType()] << " " << f->name << " (";
+            cout << "  <<< " << Types::Names[f->GetValueType()] << " " << f->name << " (";
             Vars::iterator it2 = f->variables.begin(), end2 = f->variables.end();
             bool first = true;
             for (; it2 != end2; ++it2){
@@ -1822,6 +1860,23 @@ namespace Calculator{
     }
     bool InternalFunction::IsInternalFunction(){
         return true;
+    }
+    //ConsV2
+    char* InternalFunction::ConsV2::funcName = "V2";
+    InternalFunction::ConsV2::ConsV2(bool allocatedWithNew, bool createdByOperator) : InternalFunction(allocatedWithNew, createdByOperator){
+        name = funcName;
+        variables["x"] = new Variable("x", Types::Number, true, false);
+        variables["y"] = new Variable("y", Types::Number, true, false);
+    }
+    Value* InternalFunction::ConsV2::GetValuePtr(){
+        Vector2* v2 = new Vector2((Number*)(variables["x"]->GetValuePtr()), (Number*)(variables["y"]->GetValuePtr()));
+        return v2;
+    }
+    Function* InternalFunction::ConsV2::CopyF(){
+        return new ConsV2(true);
+    }
+    Type InternalFunction::ConsV2::GetValueType(){
+        return Types::Vector2;
     }
     //Sqrt
     char* InternalFunction::Sqrt::funcName = "Sqrt";
@@ -1919,23 +1974,23 @@ namespace Calculator{
         }
         string name = string(name0);
         if (IsUnusable(name)){
-            cout << " >>> The name '" << name << "' is unusable." << endl;
+            cout << "[C]  >>> The name '" << name << "' is unusable." << endl;
             return true;
         }
         if (Function::templates.count(name)){
             if(Function::templates[name]->IsInternalFunction()){
-                cout << " <<< The name '" << name << "' is already used as an Internal Function name." << endl;
+                cout << "  <<< The name '" << name << "' is already used as an Internal Function name." << endl;
                 return true;
             }else{
-                cout << " <<< Function '" << name << "' is already defined." << endl;
+                cout << "  <<< Function '" << name << "' is already defined." << endl;
                 if (!Ask("Replace? (y/n) : ")){
                     return true;
                 }
             }
         }
         if (GlobalVariable::globalVars.count(name)){
-            cout << " <<< The name '" << name << "' is already used as an Internal Function name." << endl;
-            if (!Ask(" <<< Continue anyway? This may break things. (y/n) : ")){
+            cout << "  <<< The name '" << name << "' is already used as an Internal Function name." << endl;
+            if (!Ask("  <<< Continue anyway? This may break things. (y/n) : ")){
                 return true;
             }
         }
@@ -1955,18 +2010,18 @@ namespace Calculator{
         char input[stringBufferSize];
         char* varInput = 0;
         while(true){
-            cout << " <<< Please enter an example of how you would use this function." << endl;
-            cout << ">>>  ";
+            cout << "  <<< Please enter an example of how you would use this function." << endl;
+            cout << " >>>  ";
             gets(input);
             char name0b[stringBufferSize];
             int n3;
             if (!(n3 = MayHaveFunctionAtFront(input, (char**)&name0b))){
-                cout << " <<< Bad input" << endl;
+                cout << "  <<< Bad input" << endl;
                 continue;
             }
             string nameb = string(name0b);
             if (name != nameb){
-                cout << " <<< Bad input '" << name << "' '" << nameb << "'" << endl;
+                cout << "  <<< Bad input '" << name << "' '" << nameb << "'" << endl;
                 continue;
             }
             varInput = &(input[n3]);
@@ -2015,9 +2070,9 @@ namespace Calculator{
         }
         if (t != ')'){
             Object::TryDeleteAllocatedWithNew(sf, true);
-            if (Ask(" >>> Bad Input. Retry? (y/n) : ")){
-                cout << " >>> Please redefine the function." << endl;
-                cout << "<<<  ";
+            if (Ask("[C]  >>> Bad Input. Retry? (y/n) : ")){
+                cout << "[C]  >>> Please redefine the function." << endl;
+                cout << "[C] <<<  ";
                 gets(temp);
                 return Calculator::TryDefine(temp);
             }
@@ -2033,18 +2088,18 @@ namespace Calculator{
             val = sf->GetValuePtr();
             if (val == null)
                 throw(runtime_error("Failed to get value"));
-            cout << " >>> Output = " << *val << endl;
-            if (Ask(" >>> Redefine? (y/n) : ")){
-                cout << " >>> Please redefine the function." << endl;
-                cout << "<<<  ";
+            cout << "[C]  >>> Output = " << *val << endl;
+            if (Ask("[C]  >>> Redefine? (y/n) : ")){
+                cout << "[C]  >>> Please redefine the function." << endl;
+                cout << "[C] <<<  ";
                 gets(temp);
                 return Calculator::TryDefine(temp);
             }
         }catch(exception ex){
-            cout << " >>> Bad Input : " << ex.what() << endl;
-            if (Ask(" >>> Retry? (y/n) : ")){
-                cout << " >>> Please redefine the function." << endl;
-                cout << "<<<  ";
+            cout << "[C]  >>> Bad Input : " << ex.what() << endl;
+            if (Ask("[C]  >>> Retry? (y/n) : ")){
+                cout << "[C]  >>> Please redefine the function." << endl;
+                cout << "[C] <<<  ";
                 gets(temp);
                 return Calculator::TryDefine(temp);
             }
@@ -2082,5 +2137,162 @@ namespace Calculator{
     }
     bool IsNullOrEmpty(char* s){
         return (s==null || s[0] == '\0' || s[PreceedingSpaces(s)] == '\0');
+    }
+    namespace TwentyFour{
+        Number twentyFour(24);
+
+        bool TryBrackets(Expression* ex){
+            bool ret = false;
+            Calculator::Expression* ex1 = (Calculator::Expression*)ex->Copy();
+
+            Calculator::Bracket* ex1b = new Calculator::Bracket();
+            ex1b->members.push_back(ex1->members[0]);
+            ex1b->members.push_back(ex1->members[1]);
+            ex1b->members.push_back(ex1->members[2]);
+            ex1b->members.push_back(ex1->members[3]);
+            ex1b->members.push_back(ex1->members[4]);
+            ex1b->OrderOperations();
+
+            ex1->members.erase(ex1->members.begin(), ex1->members.begin()+5);
+            ex1->members.insert(ex1->members.begin(), ex1b);
+
+
+            Calculator::Number* num1 = (Calculator::Number*)ex1->GetValuePtr();
+            if (twentyFour == *num1){
+                cout << "[24]  >>> " << *ex1 << endl;
+                ret = true;
+                //return true;
+            }
+
+            Calculator::Expression* ex2 = (Calculator::Expression*)ex->Copy();
+
+            Calculator::Bracket* ex2b1 = new Calculator::Bracket();
+            ex2b1->members.push_back(ex2->members[0]);
+            ex2b1->members.push_back(ex2->members[1]);
+            ex2b1->members.push_back(ex2->members[2]);
+
+            ex2->members.erase(ex2->members.begin(), ex2->members.begin()+3);
+            ex2->members.insert(ex2->members.begin(), ex2b1);
+
+
+            Calculator::Bracket* ex2b2 = new Calculator::Bracket();
+            ex2b2->members.push_back(ex2->members[2]);
+            ex2b2->members.push_back(ex2->members[3]);
+            ex2b2->members.push_back(ex2->members[4]);
+            ex2->members.erase(ex2->members.begin()+2, ex2->members.begin()+5);
+            ex2->members.push_back(ex2b2);
+
+            Calculator::Number* num2 = (Calculator::Number*)ex2->GetValuePtr();
+            if (twentyFour == *num2){
+                cout << "[24]  >>> " << *ex2 << endl;
+                ret = true;
+                //return true;
+            }
+
+
+            Calculator::Expression* ex3 = (Calculator::Expression*)ex->Copy();
+
+            Calculator::Bracket* ex3b = new Calculator::Bracket();
+            ex3b->members.push_back(ex3->members[2]);
+            ex3b->members.push_back(ex3->members[3]);
+            ex3b->members.push_back(ex3->members[4]);
+            ex3b->members.push_back(ex3->members[5]);
+            ex3b->members.push_back(ex3->members[6]);
+            ex3b->OrderOperations();
+            ex3->members.erase(ex3->members.begin()+2, ex3->members.begin()+7);
+            ex3->members.push_back(ex3b);
+
+            Calculator::Number* num3 = (Calculator::Number*)ex3->GetValuePtr();
+            if (twentyFour == *num3){
+                cout << "[24]  >>> " << *ex3 << endl;
+                ret = true;
+                //return true;
+            }
+
+            return ret;
+        }
+
+        bool TryOperator(Expression* ex, Number** nums, int i){
+            bool ret = false;
+            ex->members.push_back(nums[i]);
+            if (i == 3){
+                Calculator::Expression* ex2 = (Calculator::Expression*)ex->Copy();
+                ex2->OrderOperations();
+                Calculator::Number* num = (Calculator::Number*)ex2->GetValuePtr();
+                if (twentyFour == *num){
+                    cout << "[24]  >>> " << *ex2 << endl;
+                    ret = true;
+                    //return true;
+                }
+                if(TryBrackets(ex)){
+                    ret = true;
+                    //return true;
+                }
+                delete ex2;
+            }else{
+                for (int j = 0; j < Calculator::Operator::opCount; ++j){
+                    Calculator::Expression* exi = (Calculator::Expression*)(ex->Copy());
+                    exi->members.push_back(Calculator::Operator::operators[j]);
+                    if(TryOperator(exi, nums, i+1)){
+                        ret = true;
+                        //return true;
+                    }
+                }
+            }
+            return ret;
+        }
+
+        bool TryOperators(Number** nums){
+            Calculator::Expression* ex = new Calculator::Expression();
+            if(TryOperator(ex, nums, 0)){
+                return true;
+            }
+            return false;
+        }
+        void Solve(Number** nums){
+            sort(nums, nums+4);
+            bool suc = false;
+            do{
+                if (TryOperators(nums)){
+                    suc = true;
+                    //break;
+                }
+            }while(next_permutation(nums, nums+4));
+            if(!suc){
+                cout << "Failed" << endl;
+            }
+        }
+        void Solve(int* nums0){
+            Calculator::Number* nums[4];
+            nums[0] = new Calculator::Number(nums0[0]);
+            nums[1] = new Calculator::Number(nums0[1]);
+            nums[2] = new Calculator::Number(nums0[2]);
+            nums[3] = new Calculator::Number(nums0[3]);
+            Solve(nums);
+        }
+        void Read(char* s){
+            int nums0[4];
+            if(sscanf(s, " %d %d %d %d",
+               &(nums0[0]), &(nums0[1]),
+               &(nums0[2]), &(nums0[3])) == 4){
+               Solve(nums0);
+               return;
+            }
+            cout << "Invalid input." << endl;
+        }
+        void Run(){
+            char buff[stringBufferSize];
+            cout << "[24]  >>> TwentyFour Brute Force" << endl;
+            cout << "[24]  >>> Type 'exit' to exit." << endl;
+            while(1){
+                cout << "[24]  >>> Insert the four numbers, separated by a space." << endl;
+                cout << "[24] <<<  ";
+                gets(buff);
+                if (!strcmp(buff, exitStr))
+                    break;
+                Read(buff);
+            }
+
+        }
     }
 }
